@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Dasari Sai Uma Shankar – Full-Stack Software Engineer</title>
+<meta name="description" content="Full-stack engineer building reliable payment systems with Java, Spring Boot, Kafka, React and Azure.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700&family=Source+Sans+3:wght@400;600&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#F2F4F7;--surface:#FFFFFF;--ink:#101828;--muted:#475467;--line:#D0D5DD;--accent:#0B5FFF;--accent-ink:#FFFFFF;--ok:#067647;--okbg:#E7F6EC;--code:#EAECF0;
+--head:"Bricolage Grotesque","Segoe UI",system-ui,sans-serif;--body:"Source Sans 3","Segoe UI",system-ui,sans-serif;--mono:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;
+color-scheme:light;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#0E1116;--surface:#151A22;--ink:#E6EAF0;--muted:#A0AABB;--line:#2A3342;--accent:#7BA7FF;--accent-ink:#0B1220;--ok:#6CD39A;--okbg:#10281D;--code:#1D2430;color-scheme:dark}}
+:root[data-theme="dark"]{--bg:#0E1116;--surface:#151A22;--ink:#E6EAF0;--muted:#A0AABB;--line:#2A3342;--accent:#7BA7FF;--accent-ink:#0B1220;--ok:#6CD39A;--okbg:#10281D;--code:#1D2430;color-scheme:dark}
+html{scroll-padding-top:env(safe-area-inset-top,0px);height:100%}
+*,*::before,*::after{box-sizing:inherit}
+body{margin:0;background:var(--bg);color:var(--ink);font:400 1.0625rem/1.6 var(--body);-webkit-font-smoothing:antialiased}
+main{max-width:860px;margin:0 auto;padding:0 1.25rem 4rem}
+h1,h2,h3{font-family:var(--head);line-height:1.1;margin:0;letter-spacing:-.02em}
+h1{font-size:clamp(2.4rem,7vw,4rem);font-weight:700}
+h2{font-size:1.7rem;font-weight:700;margin-bottom:1.25rem}
+h3{font-size:1.2rem;font-weight:500;letter-spacing:-.01em}
+p{margin:0 0 1rem;max-width:68ch}
+a{color:var(--accent)}
+a:focus-visible,button:focus-visible{outline:3px solid var(--accent);outline-offset:3px;border-radius:4px}
+section{padding:3rem 0 0}
+.hero{padding-top:4rem}
+.lede{font-size:1.25rem;color:var(--muted);margin:1.25rem 0 1.5rem;max-width:56ch}
+.links{display:flex;flex-wrap:wrap;gap:.6rem;margin:0;padding:0;list-style:none}
+.links a{display:inline-block;padding:.5rem .95rem;border:1px solid var(--line);border-radius:999px;text-decoration:none;color:var(--ink);background:var(--surface);font-weight:600;font-size:.97rem}
+.links a:hover{border-color:var(--accent);color:var(--accent)}
+.links a.primary{background:var(--accent);color:var(--accent-ink);border-color:var(--accent)}
+.demo{margin-top:2.5rem;background:var(--surface);border:1px solid var(--line);border-radius:14px;padding:1.25rem}
+.demo h2{font-size:1.15rem;margin-bottom:.35rem}
+.demo .sub{color:var(--muted);font-size:.97rem;margin-bottom:1rem}
+.req{font-family:var(--mono);font-size:.85rem;background:var(--code);border-radius:8px;padding:.7rem .9rem;overflow-x:auto;white-space:pre;margin:0 0 1rem}
+.row{display:flex;flex-wrap:wrap;gap:.75rem;align-items:center}
+button{font:600 1rem var(--body);cursor:pointer;border-radius:8px;padding:.6rem 1.1rem;border:1px solid var(--accent);background:var(--accent);color:var(--accent-ink)}
+button.ghost{background:transparent;color:var(--ink);border-color:var(--line)}
+.stats{font-size:.97rem;color:var(--muted)}
+.stats b{color:var(--ink)}
+.log{list-style:none;margin:1rem 0 0;padding:0;display:grid;gap:.5rem}
+.log li{font-family:var(--mono);font-size:.84rem;border-left:4px solid var(--accent);background:var(--code);padding:.55rem .75rem;border-radius:0 8px 8px 0;overflow-wrap:anywhere}
+.log li.dup{border-color:var(--ok);background:var(--okbg)}
+.job{padding:1.25rem 0;border-top:1px solid var(--line)}
+.job:first-of-type{border-top:0;padding-top:0}
+.meta{color:var(--muted);font-size:.95rem;margin:.2rem 0 .7rem}
+ul.pts{margin:0;padding-left:1.2rem}
+ul.pts li{margin:.35rem 0;max-width:68ch}
+.metrics{display:grid;grid-template-columns:repeat(auto-fit,minmax(190px,1fr));gap:1rem;margin:1.25rem 0}
+.metrics div{border-left:3px solid var(--accent);padding-left:.8rem}
+.metrics strong{display:block;font:700 1.5rem var(--head);letter-spacing:-.02em}
+.metrics span{color:var(--muted);font-size:.93rem}
+dl.skills{margin:0;display:grid;grid-template-columns:minmax(120px,170px) 1fr;gap:.6rem 1.25rem}
+dl.skills dt{font-weight:600}
+dl.skills dd{margin:0;color:var(--muted)}
+@media (max-width:600px){dl.skills{grid-template-columns:1fr;gap:.1rem}dl.skills dd{margin-bottom:.7rem}}
+footer{margin-top:4rem;padding-top:1.5rem;border-top:1px solid var(--line);color:var(--muted);font-size:.93rem}
+.tb{position:absolute;top:calc(env(safe-area-inset-top,0px) + .75rem);right:1rem;font-size:.85rem;padding:.35rem .7rem}
+@media (prefers-reduced-motion:no-preference){.log li{animation:in .25s ease-out}@keyframes in{from{opacity:0;transform:translateY(-4px)}}}
+.bar{position:fixed;top:env(safe-area-inset-top,0px);left:0;height:3px;width:0;background:var(--accent);z-index:20}
+body{overflow-x:hidden}
+.hero{position:relative}
+.hero::before{content:"";position:absolute;top:-3rem;right:-4%;width:360px;height:360px;background:radial-gradient(circle at 30% 30%,var(--accent),transparent 65%);opacity:.2;filter:blur(40px);z-index:-1;animation:drift 12s ease-in-out infinite alternate}
+@keyframes drift{to{transform:translate(-50px,40px) scale(1.15)}}
+.typed{font:500 1.35rem var(--head);margin:1rem 0 0;color:var(--accent);min-height:1.8rem}
+.cur{display:inline-block;width:2px;height:1.1em;background:var(--accent);margin-left:3px;vertical-align:-.15em;animation:blink 1s steps(1) infinite}
+@keyframes blink{50%{opacity:0}}
+.links a{transition:transform .2s,border-color .2s,color .2s,box-shadow .2s}
+.links a:hover{transform:translateY(-2px);box-shadow:0 6px 16px -8px var(--accent)}
+.links a.primary:hover{color:var(--accent-ink);filter:brightness(1.08)}
+.marq{overflow:hidden;margin-top:3rem;border-block:1px solid var(--line);padding:.8rem 0;-webkit-mask-image:linear-gradient(90deg,transparent,#000 8%,#000 92%,transparent);mask-image:linear-gradient(90deg,transparent,#000 8%,#000 92%,transparent)}
+.track{display:flex;width:max-content;animation:scroll 34s linear infinite}
+.track span{font:500 1.05rem var(--head);color:var(--muted);white-space:nowrap;margin-right:2.2rem}
+@keyframes scroll{to{transform:translateX(-50%)}}
+.flowwrap{margin:1.25rem 0;overflow-x:auto;background:var(--surface);border:1px solid var(--line);border-radius:14px;padding:1rem}
+.flow{display:block;width:100%;min-width:560px;height:auto}
+.flow rect{fill:var(--bg);stroke:var(--line);stroke-width:1.5}
+.flow rect.hot{stroke:var(--accent)}
+.flow text{fill:var(--ink);font:600 14px var(--body)}
+.flow .s{fill:var(--muted);font-weight:400;font-size:12px}
+.flow path{stroke:var(--line);fill:none;stroke-width:2}
+.flow circle{fill:var(--accent)}
+.flowwrap figcaption{color:var(--muted);font-size:.93rem;margin-top:.5rem}
+.js .rv{opacity:0;transform:translateY(16px);transition:opacity .6s ease,transform .6s ease}
+.js .rv.in{opacity:1;transform:none}
+.metrics div{transition:transform .25s,border-color .25s}
+.metrics div:hover{transform:translateX(4px)}
+@media (prefers-reduced-motion:reduce){.track,.hero::before,.cur{animation:none}.flow circle{display:none}.js .rv{opacity:1;transform:none;transition:none}}
+</style>
+</head>
+<body>
+<div class="bar" id="bar" aria-hidden="true"></div>
+<button class="ghost tb" id="theme" type="button" aria-label="Toggle light or dark theme">Theme</button>
+<main>
+<header class="hero">
+  <h1>Dasari Sai Uma Shankar</h1>
+  <p class="typed">Building <span id="tw">payment systems</span><i class="cur" aria-hidden="true"></i></p>
+  <p class="lede">I’m a full-stack software engineer who builds payment systems that stay correct when requests are retried, services fail, or traffic spikes. Java and Spring Boot on the back end, React and TypeScript on the front.</p>
+  <ul class="links" id="links"></ul>
+
+  <div class="demo" aria-labelledby="demo-h">
+    <h2 id="demo-h">Try the idea behind QuickPay</h2>
+    <p class="sub">A network retry should never charge a customer twice. Send the same request a few times and watch what happens.</p>
+    <pre class="req">POST /payments
+Idempotency-Key: 7f3a-91c2-4be0
+{ "to": "acct_2841", "amount": 500 }</pre>
+    <div class="row">
+      <button type="button" id="send">Send request</button>
+      <button type="button" id="reset" class="ghost">Reset</button>
+      <span class="stats" aria-live="polite">Requests sent: <b id="n">0</b> · Charges made: <b id="c">0</b></span>
+    </div>
+    <ul class="log" id="log" aria-live="polite"></ul>
+  </div>
+</header>
+
+<div class="marq" aria-hidden="true"><div class="track"><span>Java</span><span>Spring Boot</span><span>Kafka</span><span>Redis</span><span>PostgreSQL</span><span>React</span><span>TypeScript</span><span>Redux</span><span>Docker</span><span>Azure</span><span>GitHub Actions</span><span>Resilience4j</span><span>Prometheus</span><span>Java</span><span>Spring Boot</span><span>Kafka</span><span>Redis</span><span>PostgreSQL</span><span>React</span><span>TypeScript</span><span>Redux</span><span>Docker</span><span>Azure</span><span>GitHub Actions</span><span>Resilience4j</span><span>Prometheus</span></div></div>
+
+<section id="about">
+  <h2>About</h2>
+  <p>I work at Infosys on a logistics client’s web portal, shipping features across the React front end and the services behind it. Outside work, I designed, tested and deployed QuickPay, a microservices payments platform, to practise the reliability patterns that financial software depends on: idempotent APIs, transactional outbox, dead-letter queues and circuit breakers.</p>
+  <p>I like clear designs, thorough tests and small, well-named pieces. I’m based in Hyderabad and open to software engineering roles.</p>
+</section>
+
+<section id="experience">
+  <h2>Experience</h2>
+  <div class="job">
+    <h3>Digital Specialist Engineer, Full Stack</h3>
+    <p class="meta">Infosys, India · June 2025 to present · Logistics client portal (React, Redux, Java, Spring Boot)</p>
+    <ul class="pts">
+      <li>Build and ship new portal features across the React front end and backend services, connecting the UI to REST APIs.</li>
+      <li>Integrated an AI/LLM capability into the portal through API calls.</li>
+      <li>Designed the Redux state layer (store, actions, dispatchers and reducers) that manages application state across the UI.</li>
+      <li>Run GitHub Actions CI/CD pipelines and debug issues across the UI and API layers in Agile sprints.</li>
+    </ul>
+  </div>
+  <div class="job">
+    <h3>Programmer Analyst Trainee (Internship)</h3>
+    <p class="meta">Cognizant, Chennai · March to May 2025</p>
+    <ul class="pts">
+      <li>Trained hands-on in Java Spring Boot, microservice design patterns, REST APIs and database integration.</li>
+      <li>Debugged issues with senior engineers and followed enterprise coding and review standards.</li>
+    </ul>
+  </div>
+</section>
+
+<section id="project">
+  <h2>QuickPay: digital payment platform</h2>
+  <p>Three Spring Boot microservices (auth, payment, notification) and a Eureka registry, each with its own database, plus Redis, Apache Kafka and a React/TypeScript front end behind Nginx. Deployed on Azure.</p>
+  <figure class="flowwrap">
+    <svg class="flow" viewBox="0 0 660 190" role="img" aria-label="Payment flows from the React UI to the payment service, through the outbox to Kafka, then to the notification service. Redis guards the payment service and a dead-letter topic catches bad messages.">
+      <rect x="10" y="30" width="120" height="44" rx="10"/><text x="70" y="57" text-anchor="middle">React UI</text>
+      <rect class="hot" x="180" y="30" width="120" height="44" rx="10"/><text x="240" y="57" text-anchor="middle">Payment</text>
+      <rect x="350" y="30" width="120" height="44" rx="10"/><text x="410" y="57" text-anchor="middle">Kafka</text>
+      <rect x="520" y="30" width="120" height="44" rx="10"/><text x="580" y="57" text-anchor="middle">Notification</text>
+      <rect x="180" y="125" width="120" height="44" rx="10"/><text x="240" y="152" text-anchor="middle">Redis</text>
+      <rect x="520" y="125" width="120" height="44" rx="10"/><text x="580" y="152" text-anchor="middle">Dead-letter</text>
+      <path d="M130 52H180"/><path d="M300 52H350"/><path d="M470 52H520"/><path d="M240 74V125"/><path d="M580 74V125"/>
+      <text class="s" x="325" y="22" text-anchor="middle">outbox</text><text class="s" x="252" y="104">idempotency key</text><text class="s" x="592" y="104">poison messages</text>
+      <circle r="4"><animateMotion dur="2.4s" repeatCount="indefinite" path="M130 52H180"/></circle>
+      <circle r="4"><animateMotion dur="2.4s" begin="0.6s" repeatCount="indefinite" path="M300 52H350"/></circle>
+      <circle r="4"><animateMotion dur="2.4s" begin="1.2s" repeatCount="indefinite" path="M470 52H520"/></circle>
+      <circle r="4"><animateMotion dur="2.4s" begin="0.3s" repeatCount="indefinite" path="M240 74V125"/></circle>
+    </svg>
+    <figcaption>How a payment travels through QuickPay. The dots show events moving between services.</figcaption>
+  </figure>
+  <div class="metrics">
+    <div><strong data-to="1.10" data-dec="2" data-suf="s">1.10s</strong><span>outbox drain time for a 1,000-payment burst, down from 31.75s</span></div>
+    <div><strong data-to="366">366</strong><span>events left in the backlog, down from 1,800</span></div>
+    <div><strong data-to="182">182</strong><span>automated tests run in CI on every change</span></div>
+  </div>
+  <ul class="pts">
+    <li><b>No duplicate charges.</b> Redis-backed idempotency keys fingerprint each request and return the original payment on retry.</li>
+    <li><b>State and events never diverge.</b> The transactional outbox pattern publishes events to Kafka reliably. I sped it up by pipelining Kafka sends, removing a row lock that blocked payment writes, and indexing the poll query.</li>
+    <li><b>Bad messages can’t block good ones.</b> Notifications are processed at-least-once with manual offset acknowledgement, Redis deduplication and a dead-letter topic.</li>
+    <li><b>Safer service calls.</b> Resilience4j circuit breakers, OpenFeign timeouts, an internal API token and JWT access/refresh tokens. Prometheus metrics, health probes and structured JSON logs.</li>
+    <li><b>Automated delivery.</b> GitHub Actions runs the tests, builds Docker images in parallel, logs in to Azure with keyless OIDC and publishes immutable commit-SHA images to Azure Container Registry.</li>
+    <li><b>Production setup.</b> Azure VM with Docker Compose, managed identity for registry pulls, automatic HTTPS through Caddy and Let’s Encrypt, memory-limited containers and no secrets in source control.</li>
+  </ul>
+  <p style="margin-top:1rem"><ul class="links" id="projlinks"></ul></p>
+</section>
+
+<section id="skills">
+  <h2>Skills</h2>
+  <dl class="skills">
+    <dt>Languages</dt><dd>Java, Python, JavaScript, TypeScript, SQL, C</dd>
+    <dt>Backend</dt><dd>Spring Boot, Spring Cloud (Eureka, OpenFeign), Spring Security (JWT), Resilience4j, REST, microservices, event-driven design, LLM API integration</dd>
+    <dt>Frontend</dt><dd>React, TypeScript, Redux, HTML, CSS</dd>
+    <dt>Data and messaging</dt><dd>PostgreSQL, Redis, Apache Kafka (consumer groups, dead-letter topics, KRaft)</dd>
+    <dt>Cloud and DevOps</dt><dd>Azure (VM, Container Registry, Entra ID, Managed Identity), Docker, Docker Compose, GitHub Actions, Jenkins, Nginx, Caddy</dd>
+    <dt>Quality</dt><dd>JUnit, SonarQube, Prometheus metrics, structured JSON logging</dd>
+  </dl>
+</section>
+
+<section id="education">
+  <h2>Education</h2>
+  <h3>B.Tech, Artificial Intelligence and Machine Learning</h3>
+  <p class="meta">VNR Vignana Jyothi Institute of Engineering and Technology, Hyderabad · June 2025 · GPA 7.9 / 10</p>
+</section>
+
+<section id="contact">
+  <h2>Contact</h2>
+  <p>I’d like to hear about backend, full-stack or payments engineering roles.</p>
+  <ul class="links">
+    <li><a class="primary" href="mailto:saiumashankardasari19@gmail.com">saiumashankardasari19@gmail.com</a></li>
+    <li><a href="tel:+916304759884">+91 63047 59884</a></li>
+  </ul>
+</section>
+
+<footer>© 2026 Dasari Sai Uma Shankar · Hyderabad, India</footer>
+</main>
+
+<script>
+// Add your URLs here, then republish. Empty ones are hidden.
+var LINKS={linkedin:"https://www.linkedin.com/in/sai-uma-shankar-85b82424b/",github:"https://github.com/saiumashankar",leetcode:"https://leetcode.com/u/saiumashankardasari19/",quickpayDemo:"https://quickpay-sai.indiasouthcentral.cloudapp.azure.com",quickpayCode:"https://github.com/saiumashankar/quickpay"};
+
+(function(){
+  function addLinks(id,items){
+    var ul=document.getElementById(id);
+    items.forEach(function(it){
+      if(!it[1])return;
+      var li=document.createElement("li"),a=document.createElement("a");
+      a.href=it[1];a.textContent=it[0];a.target="_blank";a.rel="noopener noreferrer";
+      li.appendChild(a);ul.appendChild(li);
+    });
+    if(!ul.children.length&&id==="projlinks")ul.parentNode.remove();
+  }
+  addLinks("links",[["Open the live QuickPay app",LINKS.quickpayDemo],["LinkedIn",LINKS.linkedin],["GitHub",LINKS.github],["LeetCode",LINKS.leetcode]]);
+  var fl=document.querySelector("#links a");if(fl)fl.className="primary";
+  addLinks("projlinks",[["QuickPay live demo",LINKS.quickpayDemo],["QuickPay source",LINKS.quickpayCode]]);
+
+  var n=0,c=0,log=document.getElementById("log");
+  function render(){document.getElementById("n").textContent=n;document.getElementById("c").textContent=c}
+  document.getElementById("send").addEventListener("click",function(){
+    n++;var li=document.createElement("li");
+    if(c===0){c=1;li.textContent="201 Created · payment pay_1001 · amount 500 · charged once"}
+    else{li.className="dup";li.textContent="200 OK · same key found · returned original pay_1001 · no new charge"}
+    log.insertBefore(li,log.firstChild);render();
+  });
+  document.getElementById("reset").addEventListener("click",function(){n=0;c=0;log.innerHTML="";render()});
+
+  var rm=matchMedia("(prefers-reduced-motion: reduce)").matches;
+  var bar=document.getElementById("bar");
+  addEventListener("scroll",function(){var h=document.documentElement,m=h.scrollHeight-h.clientHeight;bar.style.width=(m>0?h.scrollTop/m*100:0)+"%"},{passive:true});
+  function count(el){var to=parseFloat(el.dataset.to),d=+el.dataset.dec||0,s=el.dataset.suf||"",t0=performance.now();(function f(t){var p=Math.min((t-t0)/1200,1),e=1-Math.pow(1-p,3);el.textContent=(to*e).toFixed(d)+s;if(p<1)requestAnimationFrame(f)})(t0)}
+  if(!rm&&"IntersectionObserver" in window){
+    document.documentElement.classList.add("js");
+    var io=new IntersectionObserver(function(es){es.forEach(function(e){if(!e.isIntersecting)return;e.target.classList.add("in");e.target.querySelectorAll("[data-to]").forEach(count);io.unobserve(e.target)})},{threshold:.12});
+    document.querySelectorAll("section,.job,.demo").forEach(function(el){el.classList.add("rv");io.observe(el)});
+  }
+  var words=["payment systems","Spring Boot services","React interfaces","reliable event pipelines"],tw=document.getElementById("tw");
+  if(!rm){var wi=0,ci=tw.textContent.length,del=true;(function tick(){var w=words[wi];ci+=del?-1:1;tw.textContent=w.slice(0,ci);var ms=del?35:70;if(!del&&ci>=w.length){del=true;ms=1400}else if(del&&ci<=0){del=false;wi=(wi+1)%words.length;ms=300}setTimeout(tick,ms)})()}
+
+  var root=document.documentElement,btn=document.getElementById("theme");
+  btn.addEventListener("click",function(){
+    var dark=root.getAttribute("data-theme")==="dark"||(!root.getAttribute("data-theme")&&matchMedia("(prefers-color-scheme: dark)").matches);
+    root.setAttribute("data-theme",dark?"light":"dark");
+  });
+})();
+</script>
+</body>
+</html>
